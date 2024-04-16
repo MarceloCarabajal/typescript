@@ -9,11 +9,11 @@
     //*myFunction = 10;
     //*console.log({myFunction});
     
-    myFunction = addNumbers;
-    console.log(myFunction(1,2));
+    //myFunction = addNumbers;
+    //console.log(myFunction(1,2));
     
-    myFunction = greet;
-    console.log(myFunction('Marce'));
+    //myFunction = greet;
+    //console.log(myFunction("Marce"));
 
     myFunction = saveTheWorld;
     console.log(myFunction());

@@ -6,10 +6,10 @@
     let myFunction;
     //*myFunction = 10;
     //*console.log({myFunction});
-    myFunction = addNumbers;
-    console.log(myFunction(1, 2));
-    myFunction = greet;
-    console.log(myFunction('Marce'));
+    //myFunction = addNumbers;
+    //console.log(myFunction(1,2));
+    //myFunction = greet;
+    //console.log(myFunction("Marce"));
     myFunction = saveTheWorld;
     console.log(myFunction());
 })();
