@@ -1,223 +1,51 @@
 "use strict";
-(() => {
-    const batimovil = {
-        carroceria: "Negra",
-        modelo: "6x6",
-        antibalas: true,
-        pasajeros: 4
-    };
-    const bumblebee = {
-        carroceria: "Amarillo con negro",
-        modelo: "4x2",
-        antibalas: true,
-        pasajeros: 4,
-        disparar() {
-            console.log("Disparando");
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
         }
+    return t;
+};
+(() => {
+    const avengers = {
+        nick: 'Samuel L. Jackson',
+        ironman: 'Robert Downey Jr.',
+        vision: 'Paul Bettany',
+        activo: true,
+        poder: 1500.123112
     };
-    const villanos = [{
-            nombre: "Lex Luthor",
-            edad: 54,
-            mutante: false
-        }, {
-            nombre: "Erik Magnus Lehnsherr",
-            edad: 49,
-            mutante: true
-        }, {
-            nombre: "James Logan",
-            edad: undefined,
-            mutante: true
-        }];
-    const charles = {
-        poder: "psiquico",
-        estatura: 1.78
+    const printAvengers = (_a) => {
+        var { ironman } = _a, resto = __rest(_a, ["ironman"]);
     };
-    const apocalipsis = {
-        lider: true,
-        miembros: ["Magneto", "Tormenta", "Psylocke", "Angel"]
-    };
-    console.log(apocalipsis);
-    let mystique;
-    mystique = charles;
-    mystique = apocalipsis;
+    const avengersArr = ['Cap. América', true, 150.145];
+    const [capi, ironman, unNumero] = avengersArr;
 })();
 (() => {
-    const fullName = (firstName, lastName, upper = false) => {
-        if (upper) {
-            return `${firstName} ${lastName || '----'}`.toUpperCase();
-        }
-        else {
-            return `${firstName} ${lastName || '----'}`;
-        }
+    const ironman = {
+        name: 'Ironman',
+        weapon: 'Armorsuit'
     };
-    const name = fullName('Marcelo', 'Carabajal', true);
-    console.log({ name });
-})();
-(() => {
-    const fullName = (firstName, lastName) => {
-        return `${firstName} ${lastName || '----'}`;
+    const capitanAmerica = {
+        name: 'Captain America',
+        weapon: 'Shield'
     };
-    const name = fullName('Marcelo');
-    console.log({ name });
-})();
-(() => {
-    const fullName = (firstName, lastName) => {
-        return `${firstName} ${lastName}`;
+    const thor = {
+        name: 'Thor',
+        weapon: 'Mjolnir'
     };
-    const name = fullName('Marcelo', 'Carabajal');
-    console.log({ name });
-})();
-(() => {
-    const fullName = (firstName, ...restArgs) => {
-        return `${firstName} ${restArgs.join(' ')}`;
-    };
-    const superman = fullName('Clark', 'Joseph', 'Kent', 'Carabajal');
-    console.log({ superman });
-})();
-(() => {
-    const addNumbers = (a, b) => a + b;
-    const greet = (name) => `Hola ${name}`;
-    const saveTheWorld = () => `El mundo esta salvado!`;
-    let myFunction;
-    myFunction = saveTheWorld;
-    console.log(myFunction());
-})();
-(() => {
-    const hero = 'Flash';
-    function returnName() {
-        return hero;
+    const avengers = [ironman, capitanAmerica, thor];
+    for (const aveng of avengers) {
+        console.log(aveng.name, aveng.weapon);
     }
-    const activateBatiSignal = () => {
-        return 'Batiseñal activada!';
+})();
+(() => {
+    const nombre = "Marcelo";
+    const getName = () => {
+        console.log('viejo getName');
     };
-    console.log(typeof activateBatiSignal);
-    const heroName = returnName();
-})();
-(() => {
-    let flash = {
-        name: 'Barry',
-        age: 24,
-        powers: ['super velocidad', 'viajar en el tiempo']
-    };
-    let superman = {
-        name: 'Clark Kent',
-        age: 60,
-        powers: ['super velocidad']
-    };
-})();
-(() => {
-    let flash = {
-        name: 'Barry',
-        age: 24,
-        powers: ['super velocidad', 'viajar en el tiempo']
-    };
-    let superman = {
-        name: 'Clark Kent',
-        age: 60,
-        powers: ['super velocidad'],
-        getNombres() {
-            return this.name;
-        }
-    };
-})();
-(() => {
-    let myCustomVariable = 'Fernando';
-    console.log(typeof myCustomVariable);
-    myCustomVariable = 20;
-    console.log(typeof myCustomVariable);
-    myCustomVariable = {
-        name: 'Fernando',
-        age: 20,
-        powers: ['superpoder', 'superpoder2'],
-        getNombres: () => 'Fernando'
-    };
-    console.log(typeof myCustomVariable);
-    console.log(myCustomVariable);
-})();
-(() => {
-    let avenger = 123;
-    let exists;
-    let power;
-    avenger = 'Dr Strange';
-    console.log(avenger.charAt(0));
-    avenger = 150.233423;
-    console.log(avenger.toFixed(2));
-    console.log(exists);
-    console.log(power);
-})();
-(() => {
-    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const villians = ['Omega Rojo', 'Dormammu', 'Duende Verde'];
-    villians.forEach(v => console.log(v.toUpperCase()));
-    numbers.forEach(v => console.log(v));
-})();
-(() => {
-    let isSuperman = true;
-    let isBatman = false;
-    isSuperman = (isBatman) ? true : false;
-    console.log(isSuperman);
-})();
-(() => {
-    let AudioLevel;
-    (function (AudioLevel) {
-        AudioLevel[AudioLevel["min"] = 1] = "min";
-        AudioLevel[AudioLevel["medium"] = 2] = "medium";
-        AudioLevel[AudioLevel["max"] = 10] = "max";
-    })(AudioLevel || (AudioLevel = {}));
-    const currentAudio = AudioLevel.medium;
-    console.log(currentAudio);
-    console.log(AudioLevel);
-})();
-(() => {
-    const abc = (message) => {
-        if (false) {
-            throw new Error(message);
-        }
-        return 1;
-    };
-    abc('Auxilio');
-    console.log('Hola mundo');
-})();
-(() => {
-})();
-(() => {
-    let avengers = 10;
-    console.log(avengers);
-    const villians = 20;
-    if (avengers < villians) {
-        console.log("estamos en problemas");
-    }
-    else {
-        console.log("nos salvamos");
-    }
-    avengers = Number('55A');
-    console.log({ avengers });
-})();
-(() => {
-    var _a;
-    const batman = 'Batman';
-    const linternaVerde = "Linterna's Verde";
-    const volcanNegro = `Héroe: Volcan negro`;
-    const abc = 123;
-    console.log(`I'm ${batman}, ${abc.toString()}`);
-    console.log(batman.toUpperCase());
-    console.log(((_a = batman[10]) === null || _a === void 0 ? void 0 : _a.toUpperCase()) || 'N0 esta presente');
-})();
-(() => {
-    const hero = ['Dr Strange', 100, true];
-    hero[0] = 'Iron Man';
-    hero[1] = 50;
-    hero[2] = false;
-    console.log(hero);
-})();
-(() => {
-    function callBatman() {
-        return;
-    }
-    const callSuperman = () => {
-        return;
-    };
-    const a = callBatman();
-    console.log(a);
 })();
 //# sourceMappingURL=main.js.map
