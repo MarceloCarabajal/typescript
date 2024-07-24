@@ -26,6 +26,6 @@
     // const apocalipsis = new Apocalipsis('La Nueva Era');
     // console.log(apocalipsis); 
      apocalipsis1.changeName('Soy Xavier');
-     console.log(apocalipsis1);
+     //console.log(apocalipsis1);
 
 })()
